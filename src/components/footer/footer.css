@@ -1,0 +1,118 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(254, 15%, 22%);
+
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   }
+  
+  .footer-social-media__icon {
+    margin: 0px 4px;
+    width: 25px;
+    height: 25px;
+  }
+  .footer-copyright{
+    font-weight: 400;
+    font-size: .875rem;
+  }
+  .footer-link{
+    color: #dad8d8 !important;
+    padding: 0.9rem 1.35rem;
+    text-decoration: none;
+  }
+  a.footer-link:hover {
+    color: #fff !important;
+}
+  .footer-icon{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style-type: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+  
+  .footer-info  {
+    display: flex;
+    justify-content: center;
+    padding: 34px 0px;
+   }
+  
+  .footer-info-left, .footer-info-center, .footer-info-right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  
+  .footer-info__name {
+    text-align: start;
+  }
+ 
+  .footer-seperator {
+    flex-grow: 1;
+    border: none;
+    background-color: black;
+    width: 100%;
+  }
+
+  @media screen and (max-width:960px){
+    
+    .footer {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      color: white;
+      background-color: hsl(254, 15%, 22%);
+
+      position: relative;
+      width: 100%;
+      bottom: 0;
+    }
+    .footer-info  {
+        display: block;
+        justify-content: center;
+        padding: 0px;
+       }
+      .footer-info-left, .footer-info-center, .footer-info-right {
+        display: block;
+        margin: 20px 0px;
+        width: 100%;
+      }
+      .footer-social-media {
+       flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    
+    .footer-info__name {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+      }
+      .footer-icon{
+        display: flex;
+        margin-right: 2rem;
+        justify-content: center;
+         margin: auto;
+    }
+    .footer-seperator {
+      flex-grow: 1;
+      border: none;
+      background-color: black;
+      width: 100%;
+    }
+  }
