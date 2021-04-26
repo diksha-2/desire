@@ -8,7 +8,7 @@ class Login extends React.Component{
     {
         return(
             <div>
-                <Container className="my-5 login">
+                <Container >
                 <Row>
                     <Col md="6" className="login-left">
                         <CardImg width="100%" src="https://image.ibb.co/n7oTvU/logo_white.png" alt="Card image cap" />
