@@ -1,3 +1,4 @@
+
 export default {
     signUp: `/api/v1/auth/register`,
     logIn:`/api/v1/auth/login`,

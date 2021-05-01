@@ -1,7 +1,44 @@
-import React from 'react';
+import React , {Component} from 'react';
 import './contact.css';
 import {Card, Form, Container, Row, Col} from 'react-bootstrap'
-class Contact extends React.Component{
+import {link} from 'react-router-dom';
+import { toast} from 'react-toastify';
+import {addContactUs} from '../../actions/enquiryAction';
+
+
+class Contact extends Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            email: "",
+            name: "",
+            message: ""
+        }
+    }
+
+handleChange = (e) =>{
+    const {name : value} = e.target;
+    this.setState({[name] : value}, ()=>{
+
+    });
+  }
+  submitData = () => {
+    let { name, email, message } = this.state;
+    addContactUs({ name, email, message }, (response) => {
+      if (response && response.status == "OK") {
+        toast.success(response.message, {
+          position: toast.POSITION.TOP_RIGHT
+        });
+        this.props.history.push("/");
+      } else {
+          window.alert('error');
+        //this.setAuthError(response.message);
+      }
+    });
+  }
+
+
+
 
     render()
     {
@@ -33,22 +70,26 @@ class Contact extends React.Component{
                         </Card>
                         </Col>
                         <Col sm={6} md={6} className="">
-                            <Form.Group>
+                            <Form.Group >
                                 <Form.Row className="c-form">
                                     <Form.Label column lg={2}>
                                     Name
                                     </Form.Label>
-                                   <Form.Control type="text" placeholder="" />                                   
+                                   <Form.Control type="text" placeholder="name" name="name" id="name" onChange={this.handleChange} />                                   
                                 </Form.Row>
                                 <Form.Row className="c-form">
                                     <Form.Label column lg={2}>
                                     Email &nbsp;*
                                     </Form.Label>
-                                   <Form.Control type="text" placeholder="" />                                   
+                                   <Form.Control type="text" placeholder="email" name="email" id="email" onChange={this.handleChange} />                                   
                                 </Form.Row>
                                 <Form.Row className="c-form">
                                     <Form.Label>Message</Form.Label>
-                                    <Form.Control as="textarea" rows={6} />                                  
+                                    <Form.Control as="textarea" rows={6} placeholder="email" name="email" id="email" onChange={this.handleChange} />                                  
+                                </Form.Row>
+                                <Form.Row className="c-form">
+                                <button type="submit" onClick={this.submitData}>Send Message</button>
+                                                                 
                                 </Form.Row>
                                </Form.Group>
                         </Col>
