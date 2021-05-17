@@ -1,11 +1,16 @@
 import React from 'react';
 import './home.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class Home extends React.Component{
 
     render()
     {
         return(
-            <div className="content-area">                
+            
+            <div className="content-area">   
+            <ToastContainer autoClose={3000} hideProgressBar pauseOnHover={false} />             
                 <div className="home-cover" style={{}}>
                    <div className="home-content" style={{"max-width":"585px"}}>
                         <h1 className="home-heading">Extraordinary projects deserve extraordinary work</h1>

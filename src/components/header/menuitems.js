@@ -25,6 +25,12 @@ export const Menuitems = [
         cName: 'nav-links',
     },
     {
+        title:'Sign Up',
+        path: '/Register',
+        cName: 'nav-links',
+    },
+   
+    {
         title: <i class="fas fa-search"></i>,
         
         cName: 'nav-links-mobile',

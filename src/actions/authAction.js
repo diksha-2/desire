@@ -8,12 +8,19 @@ export const register = (data, callback) => {
     })
 };
 
-export const login = (data , callback) => {
-    return api.setMethod('POST').sendRequest(apiPaths.logIn ,data, false, function(response){
-        callback(response.data);
+export const login = (data, callback) => {
+    return api.setMethod('POST').sendRequest(apiPaths.logIn, data, false, function (response) {
+        if (response) {
+            callback(response.data);
+        }
     })
-
 };
+
+// export const login =(data , callback)  => {
+//     return api.setMethod('POST').sendRequest(apiPaths.logIn, data, false , function(response) {
+//         callback(response.data);
+//     })
+// }
 
 export const forgotPassword =(data , callback)=> {
     return api.setMethod('POST').sendRequest(apiPaths.forgotPassword, data, false ,function(response){

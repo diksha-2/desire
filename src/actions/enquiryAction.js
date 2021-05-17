@@ -20,7 +20,7 @@ export const getAmc = (callback) => {
 };
 
 export const deleteAmc = (amcID , callback) => {
-    return api.setMethod('DELETE').sendRequest(apipaths.deleteAmc + amcID , null , true , function(response){
+    return api.setMethod('DELETE').sendRequest(apiPaths.deleteAmc + amcID , null , true , function(response){
         if(response){
             callback(response.data);
         }
@@ -49,7 +49,7 @@ export const getContactUs = (callback) => {
 };
 
 export const deleteContactUs = (contactID , callback) => {
-    return api.setMethod('DELETE').sendRequest(apipaths.deleteContactUs + contactID , null , true , function(response){
+    return api.setMethod('DELETE').sendRequest(apiPaths.deleteContactUs + contactID , null , true , function(response){
         if(response){
             callback(response.data);
         }
@@ -79,7 +79,7 @@ export const getProjectEquiry = (callback) => {
 };
 
 export const deleteProjectEnquiry = (enquiryID , callback) => {
-    return api.setMethod('DELETE').sendRequest(apipaths.deleteProjectEnquiry + enquiryID , null , true , function(response){
+    return api.setMethod('DELETE').sendRequest(apiPaths.deleteProjectEnquiry + enquiryID , null , true , function(response){
         if(response){
             callback(response.data);
         }

@@ -1,0 +1,22 @@
+
+.c-form {
+    padding:1rem;
+}
+.c-link{
+   text-decoration: underline;
+    color: #000;
+    font-weight: 500;
+    font-family: var(--go--font-family) !important;
+}
+.c-title{
+    padding: 8% 0 0 0px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    }
+    .c-title h1{
+        font-size: 3rem !important;
+        font-weight: 700;
+        color: var(--go-h1--color--text,var(--go-heading--color--text));
+        font-family: var(--go-heading--font-family);
+    }

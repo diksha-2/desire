@@ -17,8 +17,10 @@ export default {
     deleteContactUs:`/api/v1/enquiry/contactUs/delete`,
     addProject:`/api/v1/property/project/add`,
     getProject:`/api/v1/property/project/get`,
-    getByProject:`/api/v1/property/project`,
-    deleteProject: `/api/v1/property/project/delete`,
+    getByProject:`/api/v1/projectType/?project=`,
+    getByResidential :`/api/v1/project/Residential`,
+    getByCommercial : `/api/v1/project/Commerical`,
+    deleteProject: `/api/v1/property/project/delete/`,
     updateProject:`/api/v1/property/project/edit`,
     addProjectEnquiry:`/api/v1/property/project/enquiry`,
     getProjectEquiry:`/api/v1/property/project/enquiryall`,
@@ -29,14 +31,14 @@ export default {
     updateTestimony: `/api/v1/testimony/edit`,
     addProperty:`/api/v1/property/add`,
     getProperty: `/api/v1/property/get`,
-    deleteProperty:`/api/v1/property/delete`,
-    singleProperty: `/api/v1/property/singleProperty`,
-    updateProperty: `/api/v1/property/updateProperty`,
+    deleteProperty:`/api/v1/property/delete/`,
+    singleProperty: `/api/v1/property/singleProperty/`,
+    updateProperty: `/api/v1/property/updateProperty/`,
     getPropertyByTypePro: `/api/v1/property/getbytype`,
     getPropertyBySearch: `/api/v1/properties`,
     getPropertytoShow: `/api/v1/properties/show`,
     getPropertyByPrice:`/api/v1/property/range`,
-    changeStatus: `/api/v1/property/chageStatus`
+    changeStatus: `/api/v1/property/chageStatus/`
 
 
 }

@@ -2,7 +2,8 @@ import React , {Component} from 'react';
 import './contact.css';
 import {Card, Form, Container, Row, Col} from 'react-bootstrap'
 import {link} from 'react-router-dom';
-import { toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+
 import {addContactUs} from '../../actions/enquiryAction';
 
 
@@ -17,8 +18,11 @@ class Contact extends Component{
     }
 
 handleChange = (e) =>{
-    const {name : value} = e.target;
-    this.setState({[name] : value}, ()=>{
+    
+    const {name ,  value} = e.target;
+    let userInfo = this.state
+      userInfo[name] = value;
+    this.setState(userInfo, ()=>{
 
     });
   }
@@ -26,6 +30,7 @@ handleChange = (e) =>{
     let { name, email, message } = this.state;
     addContactUs({ name, email, message }, (response) => {
       if (response && response.status == "OK") {
+          
         toast.success(response.message, {
           position: toast.POSITION.TOP_RIGHT
         });
@@ -42,6 +47,7 @@ handleChange = (e) =>{
 
     render()
     {
+        
         return(
             <div>
                 
@@ -85,7 +91,7 @@ handleChange = (e) =>{
                                 </Form.Row>
                                 <Form.Row className="c-form">
                                     <Form.Label>Message</Form.Label>
-                                    <Form.Control as="textarea" rows={6} placeholder="email" name="email" id="email" onChange={this.handleChange} />                                  
+                                    <Form.Control as="textarea" rows={6} placeholder="message" name="message" id="message" onChange={this.handleChange} />                                  
                                 </Form.Row>
                                 <Form.Row className="c-form">
                                 <button type="submit" onClick={this.submitData}>Send Message</button>
